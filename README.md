@@ -7,3 +7,5 @@
 go env -w GO111MODULE=auto
 ## 2.生成go.mod文件
 go mod init gin-demo
+## 3.下载并安装 gin
+go get -u github.com/gin-gonic/gin
