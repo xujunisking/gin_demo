@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Hello</title>
+</head>
+<body>
+    {{/* -移除左右空格- */}}
+    <p>姓名: {{- .u1.Name -}}</p>
+    <p>年龄: {{ .u1.Age }}</p>
+    <p>性别: {{ .u1.Gender }}</p>
+
+    {{/* a comment */}}
+    <p>姓名: {{ .m1.name }}</p>
+    <p>年龄: {{ .m1.age }}</p>
+    <p>性别: {{ .m1.gender }}</p>
+    <hr>
+    {{ $v1 := 100 }}
+    {{ $age := .m1.age }}
+
+    <hr>
+    {{ if $v1 }}
+    {{ $v1 }}
+    {{else}}
+    啥都没有
+    {{end}}
+</body>
+</html>
