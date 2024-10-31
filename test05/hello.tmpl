@@ -23,5 +23,30 @@
     {{else}}
     啥都没有
     {{end}}
+
+    <hr>
+    {{ if lt .m1.age 22 }}
+    好好读书
+    {{else}}
+    好好苦钱
+    {{end}}
+
+    <hr>
+    {{ range $idx, $hobby := .hobby }}
+        <p>{{$idx}} - {{$hobby}}</p>
+    {{else}}
+        没啥爱好
+    {{end}}
+
+    <hr>
+    <p>m1</p>
+    {{ with .m1 }}
+    <p>{{ .name }}</p>
+    <p>{{ .age }}</p>
+    <p>{{ .gender }}</p>
+    {{end}}
+
+    <hr>
+    {{index .hobby 2 }}
 </body>
 </html>

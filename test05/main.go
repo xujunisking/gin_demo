@@ -34,9 +34,16 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 		"age":    16,
 	}
 
+	hobbyList := []string{
+		"足球",
+		"篮球",
+		"橄榄球",
+	}
+
 	t.Execute(w, map[string]interface{}{
-		"u1": u1,
-		"m1": m1,
+		"u1":    u1,
+		"m1":    m1,
+		"hobby": hobbyList,
 	})
 }
 
